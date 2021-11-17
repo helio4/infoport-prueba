@@ -1,0 +1,14 @@
+<div *ngIf="user" class="card detail-container">
+  <img src="{{ user.avatar }}" alt="Foto de {{ user.name }}" />
+  <ul class="detail-data">
+    <li>
+      <h1>{{ user.name }}</h1>
+      <p class="detail-message">{{ user.message }}</p>
+    </li>
+    <li class="detail-location">{{ user.location }}</li>
+    <li><app-rating-meter [rating]="user.rating"></app-rating-meter></li>
+    <li>
+      <p class="card designation-plate">{{ user.designation }}</p>
+    </li>
+  </ul>
+</div>

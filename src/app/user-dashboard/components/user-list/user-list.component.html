@@ -1,0 +1,9 @@
+<div *ngIf="users !== undefined">
+  <div class="users-container">
+    <app-user-card *ngFor="let user of users" [data]="user"></app-user-card>
+  </div>
+  <div *ngIf="users.length <= 0" class="no-users-message">
+    <h1>(´∀｀；)</h1>
+    <p>No se han encontrado usuarios.</p>
+  </div>
+</div>

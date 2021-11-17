@@ -1,0 +1,10 @@
+<h1 class="header">Gestión de Usuarios</h1>
+<div>
+  <app-search-bar
+    [users]="users"
+    (refresh)="fetchUsers()"
+    (filterMode)="onFilterModeChange($event)"
+    (searchQuerry)="onSearchQuerryChange($event)"
+  ></app-search-bar>
+</div>
+<app-user-list [users]="searchResult"></app-user-list>

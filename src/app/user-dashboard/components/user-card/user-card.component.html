@@ -1,0 +1,17 @@
+<div class="card user-container">
+  <img src="{{ data.avatar }}" alt="Foto de {{ data.name }}" />
+  <ul class="user-data">
+    <li class="card name-plate">
+      <span>{{ data.name }}</span>
+    </li>
+    <li class="user-location {{ data.rating > 4.5 ? 'is-green' : 'is-red' }}">
+      {{ data.location }}
+    </li>
+    <li><app-rating-meter [rating]="data.rating"></app-rating-meter></li>
+    <li>
+      <a [routerLink]="'user/detail/' + data.id"
+        ><button class="card edit-button">Detalles</button></a
+      >
+    </li>
+  </ul>
+</div>

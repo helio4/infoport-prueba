@@ -1,0 +1,31 @@
+<nav>
+  <form>
+    <input
+      class="search-bar"
+      type="search"
+      placeholder="Búsqueda"
+      name="searchBar"
+      [(ngModel)]="searchKey"
+      (ngModelChange)="changeSearchQuerryHandler()"
+    />
+  </form>
+  <ul class="filter-controls">
+    <li>
+      <button
+        class="{{ this.filter === 'MAYOR_RATING' ? 'is-marked' : '' }}"
+        (click)="changeFilterModeHandler('MAYOR_RATING')"
+      >
+        Mayor Rating
+      </button>
+    </li>
+    <li>
+      <button
+        class="{{ this.filter === 'MENOR_RATING' ? 'is-marked' : '' }}"
+        (click)="changeFilterModeHandler('MENOR_RATING')"
+      >
+        Menor Rating
+      </button>
+    </li>
+    <li><button (click)="refreshHandler()">Recargar</button></li>
+  </ul>
+</nav>

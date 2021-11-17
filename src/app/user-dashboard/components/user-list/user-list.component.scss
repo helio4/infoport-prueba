@@ -1,0 +1,44 @@
+.users-container {
+  margin-bottom: 1.5rem;
+}
+
+.no-users-message {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 2em;
+  padding-top: 2em;
+
+  h1 {
+    display: none;
+  }
+
+  p {
+    line-height: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 240px) {
+  .no-users-message h1 {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .users-container {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .users-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .users-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

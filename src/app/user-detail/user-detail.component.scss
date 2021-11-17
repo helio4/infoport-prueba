@@ -1,0 +1,45 @@
+.detail-container {
+  border: 1px solid var(--light-gray);
+}
+
+li {
+  padding: 0.5em 1em;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.detail-message {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+h1 {
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+.detail-location {
+  text-transform: uppercase;
+}
+
+.designation-plate {
+  background: var(--primary-blue);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: fit-content;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+  margin: 0;
+}
+
+@media only screen and (min-width: 850px) {
+  .detail-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

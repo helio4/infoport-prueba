@@ -1,0 +1,16 @@
+<div class="rating-container {{ rating > 4.5 ? 'is-green' : 'is-red' }}">
+  <span
+    *ngFor="let _ of [].constructor(fullStars)"
+    class="material-icons-outlined"
+  >
+    star
+  </span>
+  <span *ngIf="hasHalfStar" class="material-icons-outlined"> star_half </span>
+  <span
+    *ngFor="let _ of [].constructor(emptyStars)"
+    class="material-icons-outlined"
+  >
+    grade
+  </span>
+  <span>{{ rating }}</span>
+</div>
