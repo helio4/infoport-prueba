@@ -3,7 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-rating-meter',
   templateUrl: './rating-meter.component.html',
-  styleUrls: ['./rating-meter.component.scss'],
 })
 export class RatingMeterComponent implements OnInit {
   @Input()
